@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
+void main() => runApp(MaterialApp(
+    home: HomeStateless()
+));
+
+class HomeStateless extends StatelessWidget {
+  // const ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: const Text("First Apps"),
         centerTitle: true,
@@ -26,6 +33,6 @@ void main() {
         },
         backgroundColor: Colors.blueGrey,
       ),
-    )
-  ));
+    );
+  }
 }
