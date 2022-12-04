@@ -15,16 +15,13 @@ class HomeStateless extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueGrey[300],
       ),
-      body: const Center(
-        child: Text(
-          "Welcome world",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.amber,
-            fontFamily: 'Montserrat'
-          ),
+      body: Container(
+        child: Stack(
+          children: [
+            Image.network('https://images.unsplash.com/photo-1670008915231-7aaabc0101e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'),
+            Image.asset('images/img-1.jpg'),
+            Image.asset('images/img-2.jpg'),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
