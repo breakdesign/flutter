@@ -18,14 +18,33 @@ class HomeStateless extends StatelessWidget {
       body: Container(
         child: Stack(
           children: [
-            Image.network('https://images.unsplash.com/photo-1670008915231-7aaabc0101e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'),
-            Image.asset('images/img-1.jpg'),
-            Image.asset('images/img-2.jpg'),
+            // Image Example
+            // Image.network('https://images.unsplash.com/photo-1670008915231-7aaabc0101e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'),
+            // Image.asset('images/img-1.jpg'),
+            // Image.asset('images/img-2.jpg'),
+
+            // Button
+            TextButton(
+              onPressed: () {},
+              child: Text("Test"),
+              style: TextButton.styleFrom(
+                primary: Colors.white,
+                backgroundColor: Colors.teal,
+              )
+            ),
+            TextButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.add_circle), label: Text("Add")
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Text("+"),
+        child: Icon(
+          Icons.add,
+          color: Colors.teal[50],
+          size: 30.0
+        ),
         onPressed: () {
         },
         backgroundColor: Colors.blueGrey,
