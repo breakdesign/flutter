@@ -24,18 +24,40 @@ class HomeStateless extends StatelessWidget {
             // Image.asset('images/img-2.jpg'),
 
             // Button
-            TextButton(
-              onPressed: () {},
-              child: Text("Test"),
-              style: TextButton.styleFrom(
-                primary: Colors.white,
-                backgroundColor: Colors.teal,
-              )
+            // TextButton(
+            //   onPressed: () {},
+            //   child: Text("Test"),
+            //   style: TextButton.styleFrom(
+            //     primary: Colors.white,
+            //     backgroundColor: Colors.teal,
+            //   )
+            // ),
+            // TextButton.icon(
+            //     onPressed: () {},
+            //     icon: Icon(Icons.add_circle), label: Text("Add")
+            // )
+
+            // Best Choice Wrapper if you need padding and margin
+            // Container(
+            //   // EdgeInsets for set padding or margin
+            //   // EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
+            //   // EdgeInsets.all(value) => all set with value
+            //   // EdgeInsets.fromLTRB(left, top, right, bottom)
+            //   padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+            //   margin: EdgeInsets.all(20.0),
+            //   color: Colors.blueGrey,
+            //   child: Text("Test")
+            // ),
+
+            // Best Choice if need padding only but can`t have background
+            Padding(
+              // EdgeInsets for set padding or margin
+              // EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
+              // EdgeInsets.all(value) => all set with value
+              // EdgeInsets.fromLTRB(left, top, right, bottom)
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+              child: Text("Test")
             ),
-            TextButton.icon(
-                onPressed: () {},
-                icon: Icon(Icons.add_circle), label: Text("Add")
-            )
           ],
         ),
       ),
