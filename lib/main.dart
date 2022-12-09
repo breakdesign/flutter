@@ -15,34 +15,40 @@ class HomeStateless extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueGrey[300],
       ),
-      body: Column(
-        // main axis is X position (left,right)
-        // MainAxisAlignment.spaceEvenly|
-        // MainAxisAlignment.start |
-        // MainAxisAlignment.spaceBetween | dll
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        // cross axis is Y position(top,bottom)
-        // CrossAxisAlignment.start |
-        // CrossAxisAlignment.center |
-        // CrossAxisAlignment.end |
-        // CrossAxisAlignment.stretch | dll
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Row(
         children: [
-          const Text("Hello World"),
-          MaterialButton(
-            onPressed: (){},
-            color: Colors.blueGrey,
-            child: const Text("Button"),
+          // cara menghitung perbandingan flex di expanded
+          // dilihat dari total flex dalam satu children
+          // contoh: 3 + 2 + 1 = 6
+          // jika pakai flex: 3 maka akan expand sebanyak 3/6
+          // jika pakai flex: 2 maka akan expand sebanyak 2/6
+          // jika pakai flex: 1 maka akan expand sebanyak 1/6
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.blue,
+              child: const Text("1"),
+            ),
           ),
-          Container(
-            color: Colors.amber,
-            padding: const EdgeInsets.all(30),
-            child: const Text("Test"),
-
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.yellow,
+              child: const Text("2"),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Colors.orangeAccent,
+              child: const Text("3"),
+            ),
           )
         ],
       )
-
     );
   }
 }
