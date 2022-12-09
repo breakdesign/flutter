@@ -15,62 +15,34 @@ class HomeStateless extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueGrey[300],
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            // Image Example
-            // Image.network('https://images.unsplash.com/photo-1670008915231-7aaabc0101e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'),
-            // Image.asset('images/img-1.jpg'),
-            // Image.asset('images/img-2.jpg'),
+      body: Row(
+        // main axis is X position (left,right)
+        // MainAxisAlignment.spaceEvenly|
+        // MainAxisAlignment.start |
+        // MainAxisAlignment.spaceBetween | dll
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // cross axis is Y position(top,bottom)
+        // CrossAxisAlignment.start |
+        // CrossAxisAlignment.center |
+        // CrossAxisAlignment.end |
+        // CrossAxisAlignment.stretch | dll
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text("Hello World"),
+          MaterialButton(
+            onPressed: (){},
+            color: Colors.blueGrey,
+            child: const Text("Button"),
+          ),
+          Container(
+            color: Colors.amber,
+            padding: const EdgeInsets.all(30),
+            child: const Text("Test"),
 
-            // Button
-            // TextButton(
-            //   onPressed: () {},
-            //   child: Text("Test"),
-            //   style: TextButton.styleFrom(
-            //     primary: Colors.white,
-            //     backgroundColor: Colors.teal,
-            //   )
-            // ),
-            // TextButton.icon(
-            //     onPressed: () {},
-            //     icon: Icon(Icons.add_circle), label: Text("Add")
-            // )
+          )
+        ],
+      )
 
-            // Best Choice Wrapper if you need padding and margin
-            // Container(
-            //   // EdgeInsets for set padding or margin
-            //   // EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
-            //   // EdgeInsets.all(value) => all set with value
-            //   // EdgeInsets.fromLTRB(left, top, right, bottom)
-            //   padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-            //   margin: EdgeInsets.all(20.0),
-            //   color: Colors.blueGrey,
-            //   child: Text("Test")
-            // ),
-
-            // Best Choice if need padding only but can`t have background
-            Padding(
-              // EdgeInsets for set padding or margin
-              // EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
-              // EdgeInsets.all(value) => all set with value
-              // EdgeInsets.fromLTRB(left, top, right, bottom)
-              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-              child: Text("Test")
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(
-          Icons.add,
-          color: Colors.teal[50],
-          size: 30.0
-        ),
-        onPressed: () {
-        },
-        backgroundColor: Colors.blueGrey,
-      ),
     );
   }
 }
