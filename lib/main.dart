@@ -15,18 +15,18 @@ class HomeStateless extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueGrey[300],
       ),
-      body: Row(
+      body: Column(
         // main axis is X position (left,right)
         // MainAxisAlignment.spaceEvenly|
         // MainAxisAlignment.start |
         // MainAxisAlignment.spaceBetween | dll
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         // cross axis is Y position(top,bottom)
         // CrossAxisAlignment.start |
         // CrossAxisAlignment.center |
         // CrossAxisAlignment.end |
         // CrossAxisAlignment.stretch | dll
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Text("Hello World"),
           MaterialButton(
